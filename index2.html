@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<style>
+.container, .demo {
+  background-color: tomato;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The closest() Method</h2>
+
+<div class="demo"> Grandparent
+  <div class="demo container">Parent
+    <div id="myElement" class="demo">The parent of this div element will be selected.</div>
+  </div>
+</div>
+
+<script>
+const element = document.getElementById("myElement");
+const closest = element.closest(".container");
+if (closest) {
+  closest.style.border = "4px solid black";
+}
+</script>
+
+</body>
+</html>

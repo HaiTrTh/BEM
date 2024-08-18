@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  padding: 0px ;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  /* position: relative; */
+  height: 100vh; 
+  font-family: "Poppins";
+}
+.button{
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn{
+  padding: 16px 20px;
+  min-width: 200px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+.btn--success{
+  background-color: green;
+
+}
+.btn--error{
+  background-color: red;
+}
+
+.btn + .btn {
+  margin-left: 24px;
+}
+
+#main{
+  position: fixed;
+  top :32px;
+  right: 32px;
+}
+
+.toast{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 2px 2px 4px black;
+  padding: 20px;
+  min-width: 200px;
+  max-width: 500px;
+  border-left: 4px solid ;
+  margin-top: 12px
+}
+@keyframes slideIn{
+  from{
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+@keyframes fadeIn{
+  to{
+    opacity: 0;
+  }
+}
+.toast--success{
+  border-color: green ;
+}
+.toast--warning{
+  border-color: rgb(124, 124, 0); ;
+}
+.toast--error{
+  border-color: red;
+}
+.toast--success .toast__title,
+.toast--success .toast__icon{
+  color: green;
+}
+.toast--warning .toast__title,
+.toast--warning .toast__icon{
+  color: rgb(124, 124, 0);
+}
+.toast--error .toast__title,
+.toast--error .toast__icon{
+  color: red;
+}
+
+.toast__icon{
+  font-size: 24px;
+}
+.toast__body{
+  margin: 0px 12px;
+  flex-grow: 1;
+}
+.toast__title{
+}
+.toast__content{
+  line-height: 18px;
+}
+.toast__close{
+  cursor: pointer;
+  font-size: 24px;
+}
